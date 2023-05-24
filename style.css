@@ -20,6 +20,9 @@
 body{
     background-color: var(--light-grayish-blue);
     font-size:13px;
+    display: grid;
+    place-content: center;
+
 }
 
 main{
@@ -29,11 +32,12 @@ main{
 
 .container{
     display:grid;
-    padding-inline: 2rem;
+    grid-template-rows: auto;
     padding-block: 2rem;
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr;
-    gap: 2rem;
+    margin-inline: auto;
+    gap: 1.5rem;
+    width:min(95%, 70rem);
+    
 }
 
 .card{
@@ -42,7 +46,7 @@ main{
     position: relative;
     z-index: 1;
     overflow: hidden;
-    padding-inline: 1.5rem;
+    padding:1.5rem;
 }
 
 
@@ -55,14 +59,19 @@ main{
     width: 100%;
 }
 
-.img img{
+img{
     width: 100%;
-    height: 100%;
-    object-fit: cover;
+    display: block;  
+}
+
+.img img{
     border-radius: 50%;
+    aspect-ratio: 1;
+    width: 1.75rem;
 }
 .card .name {
-    margin-inline-start: 1rem;
+    line-height: 1;
+    padding-inline: 1.5rem;
     opacity: 50%;
 }
 
@@ -70,19 +79,12 @@ main{
     color: var(--white);
 }
 
-
-
 .quote{
     position: absolute;
     top: 0;
     right: 20px;
 }
 
-.quote img{
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
 
 .card-content{
     padding-inline: .5rem;
@@ -179,24 +181,6 @@ main{
 }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 footer{
     bottom: 0;
     width: 100%;
@@ -211,3 +195,24 @@ footer{
 .attribution a {
     color: hsl(228, 45%, 44%);
 }
+
+
+/* media queris */
+
+@media (min-width: 1023px){
+    .container{
+        grid-template-columns: repeat(4, 1fr); 
+    }
+
+    .grid-col-span-2{
+        grid-column: span 2;
+    }
+
+    .card:last-child{
+        grid-column-start:4;
+        grid-row-start: 1;
+        grid-row-end:3;
+
+    }
+}
+
