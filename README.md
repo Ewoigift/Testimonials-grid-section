@@ -15,7 +15,7 @@ This is a solution to the [Testimonials grid section challenge on Frontend Mento
 
 ### Links
 
-- Solution URL: [QR code solution URL](https://github.com/Ewoigift/Testimonials-grid-section)
+- Solution URL: [Testimonial grid solution URL](https://github.com/Ewoigift/Testimonials-grid-section)
 - Live Site URL: [live site URL](https://ewoigift.github.io/Testimonials-grid-section/)
 
 ### Built with
